@@ -1,14 +1,20 @@
 <template>
   <div class="right--hand">
       <div class="hand__base">
-          
+          <div v-for="i in 4" :key="i">
+              <Digit />
+          </div>
       </div>
   </div>
 </template>
 
 <script>
+import Digit from './Digit'
 export default {
   name: "HandLeft",
+  components: {
+      Digit
+  },
   props: {
     msg: String,
   },
@@ -26,5 +32,7 @@ export default {
     background: tan;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
+    display: flex;
+    justify-content: space-between;
 }
 </style>
