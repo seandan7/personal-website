@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Monitor />
+    <Keyboard />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Monitor from './components/Monitor.vue'
+import Keyboard from './components/Keyboard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Monitor,
+    Keyboard
   }
 }
 </script>
@@ -22,6 +25,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
