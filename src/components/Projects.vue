@@ -1,7 +1,7 @@
 <template>
   <div class="main--projects">
     <div class="projects__project">
-      PROJECT SCREENSHOT
+      <img src="/project-1.png" />
       <h3>Lorem Ipsum Dolor Sit</h3>
       <p><a href="#">View on Github</a></p>
     </div>
@@ -33,6 +33,9 @@ export default {
 <style scoped lang="scss">
 .projects__project {
   margin-top: 16px;
+  img {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 600px) {
     .main--projects {
