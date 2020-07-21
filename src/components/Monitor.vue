@@ -5,7 +5,7 @@
         <Website :isOn="computerOn" />
       </div>
     </div>
-      <div class="power-button" @click="computerToggle"></div>
+    <div class="power-button" @click="computerToggle"></div>
   </div>
 </template>
 
@@ -36,6 +36,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px green, 0 0 40px green, 0 0 50px green,
+      0 0 60px green, 0 0 70px green, 0 0 80px green;
+  }
+}
 .main--monitor {
   position: relative;
 }
@@ -64,7 +75,8 @@ export default {
   border: 4px solid double;
   bottom: 0;
   left: calc(50% - 10px);
-  background: green;
+  animation: glow 1s ease-in-out infinite alternate;
+  background: black;
 }
 
 /* width */
@@ -74,18 +86,18 @@ export default {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: limegreen; 
+  background: limegreen;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darkgreen; 
+  background: darkgreen;
 }
 </style>
