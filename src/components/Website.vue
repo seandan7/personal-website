@@ -9,13 +9,18 @@
           <a href="#">Projects</a>
         </div>
       </div>
+      <Slider />
     </div>
   </div>
 </template>
 
 <script>
+import Slider from './Slider';
 export default {
   name: "Website",
+  components: {
+      Slider
+  },
   props: {
       isOn: Boolean
   }
@@ -28,13 +33,15 @@ export default {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background: lightgray;
+  padding: 5px 0;
   .header__name {
-    color: lawngreen;
+    color: black;
     font-size: 20px;
   }
   .header__menu {
     a {
-      color: #fff;
+      color: #000;
       text-decoration: none;
       padding: 0 5px;
     }
