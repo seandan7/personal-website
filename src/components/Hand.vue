@@ -1,6 +1,9 @@
 <template>
   <div :class="[whichHand + '--hand']">
-    <div class="hand__base" :class="isActive ? 'active': null">
+    <div class="hand__base" :class="{
+      'active-left': isActiveLeft,
+      'active-right': isActiveRight
+    }">
       <div v-for="i in 4" :key="i">
         <Digit :whichHand="whichHand" />
       </div>
@@ -15,10 +18,30 @@ export default {
   components: {
     Digit,
   },
+  data() {
+    return {
+      isActiveLeft: false,
+      isActiveRight: false,
+      keysThatMatterLeft: ["q", "a", "z"],
+      keysThatMatterRight:["p", "l", "m"]
+    };
+  },
   props: {
     whichHand: String,
-    isActive: Boolean
-  }
+  },
+  mounted() {
+    document.addEventListener("keydown", this.toggleActive);
+  },
+  methods: {
+    toggleActive(e) {
+      if (this.keysThatMatterLeft.includes(e.key)) {
+        this.isActiveLeft ? (this.isActiveLeft = false) : (this.isActiveLeft = true);
+      }
+      if (this.keysThatMatterRight.includes(e.key)) {
+        this.isActiveRight ? (this.isActiveRight = false) : (this.isActiveRight = true);
+      }
+    }
+  },
 };
 </script>
 
@@ -38,11 +61,19 @@ export default {
 .right--hand {
   .hand__base {
     right: 0;
+    transition: right .25s ease;
+    &.active-right {
+      right: 300px;
+    }
   }
 }
 .left--hand {
   .hand__base {
     left: 0;
+    transition: left .25s ease;
+    &.active-left {
+      left: 300px;
+    }
   }
 }
 @media screen and (max-width: 600px) {

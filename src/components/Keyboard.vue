@@ -9,7 +9,6 @@
                 <span v-if="i==2 && y == 10">l</span>
                 <span v-if="i==3 && y == 1">z</span>
                 <span v-if="i==3 && y == 10">m</span>
-                
               </span>
           </div>
       </div>
