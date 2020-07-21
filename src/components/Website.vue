@@ -4,33 +4,46 @@
       <div class="site__header">
         <div class="header__name">Sean Daniels</div>
         <div class="header__menu">
-          <a href="#">About</a>
-          <a href="#">Resume</a>
-          <a href="#">Projects</a>
+          <a @click="page = 'main'" href="#">Home</a>
+          <a @click="page = 'resume'" href="#">Resume</a>
+          <a @click="page = 'projects'"  href="#">Projects</a>
         </div>
       </div>
-      <Slider />
-      <Threebox />
-      <Twobox />
-      <Twobox />
+      <div v-if="page === 'main'">
+        <Slider />
+        <Threebox />
+        <Twobox />
+      </div>
+      <div v-if="page === 'resume'">
+        RESUME HERE
+      </div>
+      <div v-id="page === 'projects'"></div>
+      <Footer />
     </div>
   </div>
 </template>
 
 <script>
-import Slider from './Slider';
-import Threebox from './Threebox';
-import Twobox from './Twobox';
+import Slider from "./Slider";
+import Threebox from "./Threebox";
+import Twobox from "./Twobox";
+import Footer from "./Footer";
 export default {
   name: "Website",
   components: {
-      Slider,
-      Threebox,
-      Twobox
+    Slider,
+    Threebox,
+    Twobox,
+    Footer,
+  },
+  data() {
+      return {
+          page: 'main'
+      }
   },
   props: {
-      isOn: Boolean
-  }
+    isOn: Boolean,
+  },
 };
 </script>
 
