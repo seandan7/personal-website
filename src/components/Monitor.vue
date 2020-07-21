@@ -47,7 +47,6 @@ export default {
   border: 20px solid lightblue;
   position: relative;
   overflow: scroll;
-  background: black;
 }
 .monitor {
   background: #000;

@@ -117,6 +117,7 @@ export default {
     left: calc(50% - 20px);
     z-index: 2;
     color: #fff;
+    cursor: pointer;
   }
 }
 </style>
