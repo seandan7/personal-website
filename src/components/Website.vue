@@ -15,9 +15,11 @@
         <Twobox />
       </div>
       <div v-if="page === 'resume'">
-        RESUME HERE
+        <Resume />
       </div>
-      <div v-id="page === 'projects'"></div>
+      <div v-if="page === 'projects'">
+          <Projects />
+      </div>
       <Footer />
     </div>
   </div>
@@ -28,6 +30,8 @@ import Slider from "./Slider";
 import Threebox from "./Threebox";
 import Twobox from "./Twobox";
 import Footer from "./Footer";
+import Resume from './Resume';
+import Projects from './Projects';
 export default {
   name: "Website",
   components: {
@@ -35,6 +39,8 @@ export default {
     Threebox,
     Twobox,
     Footer,
+    Resume,
+    Projects
   },
   data() {
       return {
