@@ -1,45 +1,51 @@
 <template>
   <div class="main--slider">
     <div class="slider__slides">
-      <div v-if="sliderNum === 1" class="slide slide__one">
-        <div class="overlay">
-          <h1>New York Based Software Developer</h1>
+      <transition name="slide-fade">
+        <div v-if="sliderNum === 1" class="slide slide__one">
+          <div class="overlay">
+            <h1>New York Based Software Developer</h1>
+          </div>
+          <video autoplay loop>
+            <source src="/video.mp4" type="video/mp4" />
+          </video>
         </div>
-        <video autoplay loop>
-          <source src="/video.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div v-if="sliderNum === 2" class="slide slide__two">
-        <div class="overlay">
-          <h2>Javascripter</h2>
+      </transition>
+      <transition name="slide-fade">
+        <div v-if="sliderNum === 2" class="slide slide__two">
+          <div class="overlay">
+            <h2>Javascripter</h2>
+          </div>
+          <img src="sea.jpg" class="slide__img" />
         </div>
-        <img src="sea.jpg" class="slide__img" />
-      </div>
-      <div v-if="sliderNum === 3" class="slide slide__three">
-        <div class="overlay">
-          <h2>Contact Me</h2>
-          <p>sean@seandaniels.com</p>
+      </transition>
+      <transition name="slide-fade">
+        <div v-if="sliderNum === 3" class="slide slide__three">
+          <div class="overlay">
+            <h2>Contact Me</h2>
+            <p>sean@seandaniels.com</p>
+          </div>
+          <vue-particles
+            color="#fff"
+            :particleOpacity="0.7"
+            :particlesNumber="80"
+            shapeType="circle"
+            :particleSize="4"
+            linesColor="#dedede"
+            :linesWidth="1"
+            :lineLinked="true"
+            :lineOpacity="0.4"
+            :linesDistance="150"
+            :moveSpeed="3"
+            :hoverEffect="true"
+            hoverMode="grab"
+            :clickEffect="true"
+            clickMode="push"
+          >
+          </vue-particles>
+          <img src="stars.jpg" class="slide__img" />
         </div>
-        <vue-particles
-          color="#fff"
-          :particleOpacity="0.7"
-          :particlesNumber="80"
-          shapeType="circle"
-          :particleSize="4"
-          linesColor="#dedede"
-          :linesWidth="1"
-          :lineLinked="true"
-          :lineOpacity="0.4"
-          :linesDistance="150"
-          :moveSpeed="3"
-          :hoverEffect="true"
-          hoverMode="grab"
-          :clickEffect="true"
-          clickMode="push"
-        >
-        </vue-particles>
-        <img src="stars.jpg" class="slide__img" />
-      </div>
+      </transition>
     </div>
     <div class="slider__toggle">
       <div @click="sliderNum = 1">o</div>
@@ -67,6 +73,7 @@ export default {
   height: 200px;
   width: 100%;
   position: relative;
+  overflow: hidden;
   .slide {
     position: absolute;
     top: 0;
@@ -119,5 +126,18 @@ export default {
     color: #fff;
     cursor: pointer;
   }
+}
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(30px);
+  opacity: 0;
 }
 </style>
