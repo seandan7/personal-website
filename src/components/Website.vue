@@ -10,16 +10,19 @@
         </div>
       </div>
       <Slider />
+      <Threebox />
     </div>
   </div>
 </template>
 
 <script>
 import Slider from './Slider';
+import Threebox from './Threebox';
 export default {
   name: "Website",
   components: {
-      Slider
+      Slider,
+      Threebox
   },
   props: {
       isOn: Boolean

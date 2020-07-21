@@ -32,7 +32,7 @@ export default {
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border: 1px solid lightgray;
-    background: cyan;
+    background: burlywood;
   }
   .knuckle {
     position: absolute;

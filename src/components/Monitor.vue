@@ -47,13 +47,14 @@ export default {
   margin: 0 auto;
   background: lightblue;
   position: relative;
+  overflow: scroll;
 }
 .monitor {
   background: #000;
   position: absolute;
   left: 20px;
   top: 20px;
-  height: calc(100% - 40px);
+  min-height: calc(100% - 40px);
   width: calc(100% - 40px);
 }
 .power-button {
