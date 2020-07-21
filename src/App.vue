@@ -2,23 +2,21 @@
   <div id="app">
     <Monitor />
     <Keyboard />
-    <HandLeft />
-    <HandRight />
+    <Hand :whichHand="'left'" />
+    <Hand :whichHand="'right'" />
   </div>
 </template>
 
 <script>
 import Monitor from './components/Monitor.vue'
 import Keyboard from './components/Keyboard.vue'
-import HandLeft from './components/HandLeft.vue'
-import HandRight from './components/HandRight.vue'
+import Hand from './components/Hand.vue'
 export default {
   name: 'App',
   components: {
     Monitor,
     Keyboard,
-    HandLeft,
-    HandRight
+    Hand
   }
 }
 </script>
@@ -32,5 +30,6 @@ export default {
   color: #2c3e50;
   position: relative;
   height: 100vh;
+  background: #2c3e50;
 }
 </style>
