@@ -2,7 +2,7 @@
   <div :class="[whichHand + '--hand']">
       <div class="hand__base">
           <div v-for="i in 4" :key="i">
-              <Digit />
+              <Digit :whichHand="whichHand" />
           </div>
       </div>
   </div>
