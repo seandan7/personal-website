@@ -2,22 +2,24 @@
   <div class="main--projects">
     <div class="projects__project">
       <img src="/project-1.png" />
-      <h3>Lorem Ipsum Dolor Sit</h3>
+      <h3>Website on Wheels</h3>
+      <p>Freelance Development</p>
+      <p><a href="#">View Site</a></p>
+    </div>
+    <div class="projects__project">
+      <img src="/project-2.png" />
+      <h3>Vue API Table Builder</h3>
       <p><a href="#">View on Github</a></p>
     </div>
     <div class="projects__project">
-        PROJECT SCREENSHOT
-      <h3>Lorem Ipsum Dolor Sit</h3>
+      <img src="/project-3.png" />
+      <h3>Personal Website</h3>
+      <p>This is getting meta</p>
       <p><a href="#">View on Github</a></p>
     </div>
     <div class="projects__project">
-        PROJECT SCREENSHOT
-      <h3>Lorem Ipsum Dolor Sit</h3>
-      <p><a href="#">View on Github</a></p>
-    </div>
-    <div class="projects__project">
-        PROJECT SCREENSHOT
-      <h3>Lorem Ipsum Dolor Sit</h3>
+      <img src="/project-4.png" />
+      <h3>Telehealth Waiting Room</h3>
       <p><a href="#">View on Github</a></p>
     </div>
   </div>
@@ -38,12 +40,12 @@ export default {
   }
 }
 @media screen and (min-width: 600px) {
-    .main--projects {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .projects__project {
-        width: 50%;
-    }
+  .main--projects {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .projects__project {
+    width: 50%;
+  }
 }
 </style>
