@@ -1,6 +1,7 @@
 <template>
   <div class="main--resume">
     <div class="resume">
+        <a href="#">Download Full PDF Resume</a>
         <h3>Experience</h3>
         <div class="resume__item">
             <p><b>Lorem, ipsum dolor</b></p>
@@ -44,5 +45,6 @@ export default {
         margin: 16px;
         padding: 16px;
         text-align: left;
+        border: 12px double black;
     }
 </style>

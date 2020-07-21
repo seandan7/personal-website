@@ -1,6 +1,25 @@
 <template>
   <div class="main--projects">
-    Projects
+    <div class="projects__project">
+      PROJECT SCREENSHOT
+      <h3>Lorem Ipsum Dolor Sit</h3>
+      <p><a href="#">View on Github</a></p>
+    </div>
+    <div class="projects__project">
+        PROJECT SCREENSHOT
+      <h3>Lorem Ipsum Dolor Sit</h3>
+      <p><a href="#">View on Github</a></p>
+    </div>
+    <div class="projects__project">
+        PROJECT SCREENSHOT
+      <h3>Lorem Ipsum Dolor Sit</h3>
+      <p><a href="#">View on Github</a></p>
+    </div>
+    <div class="projects__project">
+        PROJECT SCREENSHOT
+      <h3>Lorem Ipsum Dolor Sit</h3>
+      <p><a href="#">View on Github</a></p>
+    </div>
   </div>
 </template>
 
@@ -12,5 +31,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+.projects__project {
+  margin-top: 16px;
+}
+@media screen and (min-width: 600px) {
+    .main--projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .projects__project {
+        width: 50%;
+    }
+}
 </style>

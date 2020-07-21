@@ -64,8 +64,10 @@ export default {
   .header__name {
     color: black;
     font-size: 20px;
+    padding: 5px;
   }
   .header__menu {
+      padding: 7px;
     a {
       color: #000;
       text-decoration: none;
