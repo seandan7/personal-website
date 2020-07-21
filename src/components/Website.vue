@@ -11,6 +11,8 @@
       </div>
       <Slider />
       <Threebox />
+      <Twobox />
+      <Twobox />
     </div>
   </div>
 </template>
@@ -18,11 +20,13 @@
 <script>
 import Slider from './Slider';
 import Threebox from './Threebox';
+import Twobox from './Twobox';
 export default {
   name: "Website",
   components: {
       Slider,
-      Threebox
+      Threebox,
+      Twobox
   },
   props: {
       isOn: Boolean
