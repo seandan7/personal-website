@@ -51,7 +51,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 300px;
-  height: 200px;
+  height: 100px;
   background: tan;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;

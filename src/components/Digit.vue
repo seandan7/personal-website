@@ -17,7 +17,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .digit--full {
-  height: 300px;
+  height: 200px;
   width: 40px;
   background: tan;
   margin-top: -150px;
