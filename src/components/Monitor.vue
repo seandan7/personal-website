@@ -43,6 +43,7 @@ export default {
 .monitor__frame {
   height: 600px;
   width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   background: lightblue;
   position: relative;
