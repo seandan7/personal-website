@@ -1,38 +1,39 @@
 <template>
   <div :class="[whichHand + '--hand']">
-      <div class="hand__base">
-          <div v-for="i in 4" :key="i">
-              <Digit :whichHand="whichHand" />
-          </div>
+    <div class="hand__base" :class="isActive ? 'active': null">
+      <div v-for="i in 4" :key="i">
+        <Digit :whichHand="whichHand" />
       </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Digit from './Digit'
+import Digit from "./Digit";
 export default {
   name: "Hand",
   components: {
-      Digit
+    Digit,
   },
   props: {
     whichHand: String,
-  },
+    isActive: Boolean
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .hand__base {
-    position: absolute;
-    bottom: 0;
-    width: 300px;
-    height: 200px;
-    background: tan;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  height: 200px;
+  background: tan;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 .right--hand {
   .hand__base {
