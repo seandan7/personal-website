@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Keyboard",
   props: {
