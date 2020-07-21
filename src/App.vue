@@ -24,16 +24,16 @@ export default {
 <style>
 body {
   margin: 0;
+  font-family: 'Red Rose', cursive;
 }
 #app {
-  overflow: hidden;;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: #2c3e50;
 }
 </style>

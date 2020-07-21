@@ -44,4 +44,9 @@ export default {
     left: 0;
   }
 }
+@media screen and (max-width: 600px) {
+  .hand__base {
+    display: none;
+  }
+}
 </style>

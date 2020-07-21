@@ -19,7 +19,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .keyboard__frame {
     background: lightgray;
     width: 60%;
@@ -40,5 +40,13 @@ export default {
 .row__key {
     width: 10%;
     border-left: 1px solid black;
+}
+@media screen and (max-width: 600px) {
+  .keyboard__frame {
+    height: 150px;
+    .keyboard__row {
+      height: 25px
+    }
+  }
 }
 </style>
