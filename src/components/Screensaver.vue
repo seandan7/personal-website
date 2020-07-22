@@ -48,12 +48,12 @@ export default {
       Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
       Bodies.rectangle(0, 300, 50, 600, { isStatic: true }),
     ]);
-    engine.world.gravity.x = 4;
-    engine.world.gravity.y = 4;
+    engine.world.gravity.x = 1;
+    engine.world.gravity.y = 1;
     setTimeout(() => {
       engine.world.gravity.x = 0;
     engine.world.gravity.y = 0;
-    })
+    }, 1000)
 
     var circle = Bodies.circle(200, 200, 75, {
       restitution: 1,
