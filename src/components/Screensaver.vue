@@ -32,8 +32,6 @@ export default {
         wireframes: false,
         width: 650,
         height: 500,
-        showVelocity: true,
-        showAngleIndicator: true,
       },
     });
 
@@ -61,7 +59,7 @@ export default {
       inertia: Infinity,
       render: {
         sprite: {
-          texture: "/sea.jpg",
+          texture: "/name.png",
         },
       },
     });
