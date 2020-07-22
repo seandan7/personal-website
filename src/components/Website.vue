@@ -22,6 +22,9 @@
       </div>
       <Footer />
     </div>
+    <div v-else>
+      <Screensaver />
+    </div>
   </div>
 </template>
 
@@ -32,6 +35,7 @@ import Twobox from "./Twobox";
 import Footer from "./Footer";
 import Resume from './Resume';
 import Projects from './Projects';
+import Screensaver from './Screensaver';
 export default {
   name: "Website",
   components: {
@@ -40,7 +44,8 @@ export default {
     Twobox,
     Footer,
     Resume,
-    Projects
+    Projects,
+    Screensaver
   },
   data() {
       return {
