@@ -20,5 +20,7 @@ yarn build
 yarn lint
 ```
 
+Node V 12
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
